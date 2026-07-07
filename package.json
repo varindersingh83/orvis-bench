@@ -1,0 +1,17 @@
+{
+  "name": "orvis-bench",
+  "version": "1.0.0",
+  "description": "Custom model and agent benchmarking suite aligned with Arena.ai and OpenRouter",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "bun test",
+    "bench": "/data/.bun/bin/bun src/index.ts"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.14"
+  }
+}
