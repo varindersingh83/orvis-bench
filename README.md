@@ -22,15 +22,22 @@ All competitor models successfully achieved 100% functional compliance and passe
 
 | Model ID | Category | Local Score | Average Cost (USD) | Avg Latency (ms) | Status |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **`nvidia/nemotron-3-ultra-550b-a55b:free`** | coding | **1400** | **$0.00000** *(free)* | **1,749ms** | PASSED |
-| **`nvidia/nemotron-3-ultra-550b-a55b:free`** | instruction_following | **1400** | **$0.00000** *(free)* | 17,540ms | PASSED |
-| **`anthropic/claude-sonnet-5`** | coding | **1400** | **$0.00128** | **3,485ms** | PASSED |
-| **`anthropic/claude-sonnet-5`** | instruction_following | **1400** | **$0.00168** | **3,550ms** | PASSED |
-| **`openai/gpt-5.5`** | instruction_following | **1400** | **$0.00235** | **2,770ms** | PASSED |
-| **`~anthropic/claude-fable-latest`** | instruction_following | **1400** | **$0.01082** | 4,292ms | PASSED |
-| **`~anthropic/claude-fable-latest`** | coding | **1400** | **$0.01070** | 4,926ms | PASSED |
-| **`sakana/fugu-ultra`** | coding | **1400** | **$0.00996** | 9,050ms | PASSED |
-| **`sakana/fugu-ultra`** | instruction_following | **1400** | **$0.01713** | 11,486ms | PASSED |
+| **`nvidia/nemotron-3-ultra-550b-a55b:free`** | coding | **1400** | **$0.00000** *(free)* | **2,712ms** | PASSED |
+| **`nvidia/nemotron-3-ultra-550b-a55b:free`** | instruction_following | **1400** | **$0.00000** *(free)* | **3,182ms** | PASSED |
+| **`anthropic/claude-sonnet-5`** | coding | **1400** | **$0.00148** | **3,539ms** | PASSED |
+| **`anthropic/claude-sonnet-5`** | instruction_following | **1400** | **$0.00158** | **3,096ms** | PASSED |
+| **`openai/gpt-5.5`** | coding | **1400** | **$0.00117** | **1,434ms** | PASSED |
+| **`openai/gpt-5.5`** | instruction_following | **1400** | **$0.00238** | **3,315ms** | PASSED |
+| **`openai/gpt-5.6-luna-pro`** | coding | **1400** | **$0.00289** | **1,808ms** | PASSED |
+| **`openai/gpt-5.6-luna-pro`** | instruction_following | **1400** | **$0.00467** | **3,523ms** | PASSED |
+| **`openai/gpt-5.6-terra-pro`** | coding | **1400** | **$0.00763** | **2,384ms** | PASSED |
+| **`openai/gpt-5.6-terra-pro`** | instruction_following | **1400** | **$0.01005** | **2,160ms** | PASSED |
+| **`~anthropic/claude-fable-latest`** | coding | **1400** | **$0.00822** | **4,193ms** | PASSED |
+| **`~anthropic/claude-fable-latest`** | instruction_following | **1400** | **$0.01081** | **5,061ms** | PASSED |
+| **`openai/gpt-5.6-sol-pro`** | coding | **1400** | **$0.01368** | **2,179ms** | PASSED |
+| **`openai/gpt-5.6-sol-pro`** | instruction_following | **1400** | **$0.01869** | **3,232ms** | PASSED |
+| **`sakana/fugu-ultra`** | coding | **1400** | **$0.00852** | **8,161ms** | PASSED |
+| **`sakana/fugu-ultra`** | instruction_following | **1400** | **$0.01272** | **8,437ms** | PASSED |
 
 ---
 
@@ -41,17 +48,26 @@ This grid charts the optimal boundary (the trade-off curve) balancing **Target I
 ```
 Intelligence/Elo ────────► (Higher EElo is better)
   ▲
+  │                                                                 [openai/gpt-5.6-sol-pro]
+  │                                                                   (EElo: 1420 | Cost: $0.016)
+  │
   │                                                                 [~anthropic/claude-fable-latest]
-  │                                                                   (EElo: 1395 | Cost: $0.010)
+  │                                                                   (EElo: 1395 | Cost: $0.009)
   │
   │                                             [openai/gpt-5.5]
   │                                               (EElo: 1380 | Cost: $0.002)
   │
+  │                                           [openai/gpt-5.6-terra-pro]
+  │                                             (EElo: 1365 | Cost: $0.008)
+  │
   │                         [anthropic/claude-sonnet-5]
   │                           (EElo: 1342 | Cost: $0.001)
   │
+  │                       [openai/gpt-5.6-luna-pro]
+  │                         (EElo: 1330 | Cost: $0.003)
+  │
   │             [sakana/fugu-ultra]
-  │               (EElo: 1315 | Cost: $0.017)
+  │               (EElo: 1315 | Cost: $0.010)
   │
   │ [nvidia/nemotron-3-ultra-550b-a55b:free]
   │   (EElo: 1285 | Cost: $0.00)

@@ -2,14 +2,19 @@ import { BenchDatabase } from './core/db';
 import { Evaluator } from './evaluator';
 import { INSTRUCTION_FOLLOWING_CASES, CODING_RECOVERY_CASES } from './cases/suites';
 
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || "";
+import { OPENROUTER_API_KEY as KEY } from './key';
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || KEY;
 
 // Active candidate models spanning both cheap frontiers and luxury frontiers
 const MODELS_TO_BENCH = [
-  "google/gemini-2.5-flash",
-  "meta-llama/llama-3.3-70b-instruct",
-  "anthropic/claude-sonnet-5", // Correct Arena / OpenRouter Sonnet 5 slug
-  "deepseek/deepseek-chat"
+  "sakana/fugu-ultra",
+  "anthropic/claude-sonnet-5",
+  "~anthropic/claude-fable-latest",
+  "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "openai/gpt-5.5",
+  "openai/gpt-5.6-luna-pro",
+  "openai/gpt-5.6-terra-pro",
+  "openai/gpt-5.6-sol-pro"
 ];
 
 async function main() {
@@ -17,10 +22,14 @@ async function main() {
   await db.initSchema();
 
   console.log("📥 Seeding OpenRouter and Arena.ai model directory pricing into local database...");
-  await db.upsertPricing("google/gemini-2.5-flash", 0.075, 0.3, 1268);
-  await db.upsertPricing("meta-llama/llama-3.3-70b-instruct", 0.6, 0.6, 1290);
-  await db.upsertPricing("anthropic/claude-sonnet-5", 2.0, 10.0, 1342); // Seed Sonnet 5 with correct OpenRouter values
-  await db.upsertPricing("deepseek/deepseek-chat", 0.14, 0.28, 1310);
+  await db.upsertPricing("sakana/fugu-ultra", 5.0, 30.0, 1315);
+  await db.upsertPricing("anthropic/claude-sonnet-5", 2.0, 10.0, 1342);
+  await db.upsertPricing("~anthropic/claude-fable-latest", 15.0, 75.0, 1395);
+  await db.upsertPricing("nvidia/nemotron-3-ultra-550b-a55b:free", 0.0, 0.0, 1285);
+  await db.upsertPricing("openai/gpt-5.5", 5.0, 15.0, 1380);
+  await db.upsertPricing("openai/gpt-5.6-luna-pro", 1.0, 6.0, 1330);
+  await db.upsertPricing("openai/gpt-5.6-terra-pro", 2.5, 15.0, 1365);
+  await db.upsertPricing("openai/gpt-5.6-sol-pro", 5.0, 30.0, 1420);
 
   const evaluator = new Evaluator(OPENROUTER_API_KEY, db);
 
