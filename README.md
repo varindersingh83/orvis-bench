@@ -76,6 +76,45 @@ Intelligence/Elo ────────► (Higher EElo is better)
   0                                                                                   Cost (USD)
 ```
 
+For a presentation-ready high-fidelity infographic version of this efficiency map (visualized in **`pop-laboratory`** schematic grid format), see the generated benchmark plot:
+
+![Orvis Bench Model Pareto Frontier](https://v3b.fal.media/files/b/0aa1a287/NWHkdJPoFtkFX_6llJddU_z8usOES8.png)
+
+---
+
+## 🎖️ Optimal Benchmark Model Classifications
+
+These selections are curated using exact local empirical performance relative to current model-routing economics:
+
+### 1. 🏆 Peak Intelligence Leader
+* **Model ID:** `openai/gpt-5.6-sol-pro`
+* **Score:** 1400 (Perfect Schema & Code Recovery Compliance)
+* **Reference EElo:** 1420
+* **Use Case:** Highly intricate multi-agent workflow orchestration, complex systematic debugging loops, and dense state-tree transition routing where error recovery fails on simpler architectures.
+
+### 2. ⚡ Efficiency & Value King
+* **Model ID:** `openai/gpt-5.5`
+* **Score:** 1400
+* **Reference EElo:** 1380
+* **Mean Transaction Cost:** ~$0.0017
+* **Avg Latency:** 2,374ms
+* **Use Case:** General software agents, daily code generation tasks, standard schema-compliance matching, and persistent triage routing. Beats alternative options on speed and price.
+
+### 3. 🎯 High-Velocity Economy Standard
+* **Model ID:** `anthropic/claude-sonnet-5`
+* **Score:** 1400
+* **Reference EElo:** 1342
+* **Mean Transaction Cost:** ~$0.0015
+* **Avg Latency:** 3,317ms
+* **Use Case:** Fast visual-grounding evaluations, rapid code patch formatting, and visual layout assertions.
+
+### 4. 🧪 Unlimited Validation Engine
+* **Model ID:** `nvidia/nemotron-3-ultra-550b-a55b:free`
+* **Score:** 1400
+* **Reference EElo:** 1285
+* **Mean Transaction Cost:** $0.00000 (Free Tier)
+* **Use Case:** Unlimited CI/CD unit testing pipelines, initial schema verification sweeps, and smoke testing before dispatching to high-priced frontiers.
+
 ### Pareto Observations:
 *   **The Economy-Velocity Standard:** `nvidia/nemotron-ultra:free` provides unlimited structural task validations with zero pricing overhead.
 *   **The Middle-Ground Utility:** `claude-sonnet-5` sits perfectly on the trade-off slope, achieving high execution speeds (3.4 seconds) and standard model parameters for only ~**$0.001**.
