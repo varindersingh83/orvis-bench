@@ -78,7 +78,7 @@ Intelligence/Elo ────────► (Higher EElo is better)
 
 For a presentation-ready high-fidelity infographic version of this efficiency map (visualized in **`pop-laboratory`** schematic grid format), see the generated benchmark plot:
 
-![Orvis Bench Model Pareto Frontier](https://v3b.fal.media/files/b/0aa1a287/NWHkdJPoFtkFX_6llJddU_z8usOES8.png)
+![Orvis Bench Model Pareto Frontier](https://v3b.fal.media/files/b/0aa1a28d/zwIiEIyEE9NUg-aPy8PuP_s2BZXyUg.png)
 
 ---
 
